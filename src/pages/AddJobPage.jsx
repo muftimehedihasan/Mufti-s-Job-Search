@@ -13,8 +13,16 @@ const AddJobPage = ({ addJobSubmit }) => {
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
 
+  const [error, setError] =useState('');
+
+
   const navigate = useNavigate();
 
+  /**
+   * Submits the add job form by calling addJobSubmit with a newJob object
+   * and redirects to the jobs page after a successful submission.
+   * @param {Event} e - The event object passed from the onSubmit event handler.
+   */
   const submitForm = (e) => {
     e.preventDefault();
 
